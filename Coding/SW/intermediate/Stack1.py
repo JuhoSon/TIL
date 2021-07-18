@@ -96,42 +96,64 @@ E개의 줄 이후에는 경로의 존재를 확인할 출발 노드 S와 도착
 [출력]
 각 줄마다 "#T" (T는 테스트 케이스 번호)를 출력한 뒤, 답을 출력한다.
 '''
-# 1
-# 6 5
-# 1 4
+# 1 (T)
+# 6 5 (V, E)
+# 1 4 (Start, End)
 # 1 3
 # 2 3
 # 2 5
 # 4 6
+# 1 6 (S, G)
+def dfs(start_idx, visited, grap):
+    visited[start_idx] = True
+    for node in grap[start_idx]:
+        if visited[node] != True:
+            dfs(node, visited, grap)
+        
+        
 T = int(input())
-
-V, E = list(map(int, input().split(' ')))
-
-# 인터넷
-
-
-def dfs(node_index, visited, nodes):
-    visited[node_index] = 1
-    for node in nodes[node_index]:
-        if visited[node] != 1:
-            dfs(node, visited, nodes)
-
-
-for t in range(int(input())):
-    V, E = map(int, input().split())
-    nodes = [[] for _ in range(V+1)]
+for t in range(1, T+1):
+    V, E = list(map(int, input().split(' ')))
+    grap = dict()
     for _ in range(E):
-        start, end = map(int, input().split())
-        nodes[start].append(end)
-    S, G = map(int, input().split())
-    visited = [0 for _ in range(V+1)]
-    dfs(S, visited, nodes)
-    answer = 0
-    if visited[G] == 1:
-        answer = 1
-    print('#{} {}'.format(t+1, answer))
+        start, end = list(map(int, input().split(' ')))
+        if start not in grap:
+            grap[start] = []
+        if end not in grap:
+            grap[end] = []
+        grap[start].append(end)
+    S, G = list(map(int, input().split(' ')))
+    visited = {k:False for k in grap.keys()}
+    print(visited, grap)
+    flag = 0
+    if visited[S] == True:
+        flag = 1
+    print(visited, grap)
+    print('#{} {}'.format(t, flag))
 
 
+# def dfs(node_index, visited, nodes):
+#     visited[node_index] = 1
+#     for node in nodes[node_index]:
+#         if visited[node] != 1:
+#             dfs(node, visited, nodes)
+
+
+# for t in range(int(input())):
+#     V, E = map(int, input().split())
+#     nodes = [[] for _ in range(V+1)]
+#     for _ in range(E):
+#         start, end = map(int, input().split())
+#         nodes[start].append(end)
+#     S, G = map(int, input().split())
+#     visited = [0 for _ in range(V+1)]
+#     print(nodes, visited)
+#     dfs(S, visited, nodes)
+#     answer = 0
+#     if visited[G] == 1:
+#         answer = 1
+#     print(nodes, visited)
+#     print('#{} {}'.format(t+1, answer))
 # '''4873 반복문자 지우기
 # 문자열 s에서 반복된 문자를 지우려고 한다. 지워진 부분은 다시 앞뒤를 연결하는데, 만약 연결에 의해 또 반복문자가 생기면 이부분을 다시 지운다.
 # 반복문자를 지운 후 남은 문자열의 길이를 출력 하시오. 남은 문자열이 없으면 0을 출력한다.
