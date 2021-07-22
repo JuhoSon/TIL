@@ -172,7 +172,17 @@ T = int(input()) + 1
 for t in range(1, T):
     N = int(input())
     matrix = [list(map(int, input().split())) for _ in range(N)]
-    
-    print('#{} {}'.format(t, result))
-    
-    
+    matCol = [[], [], []]
+    for firstValue, secondValue, thirdValue in matrix:
+        matCol[0].append(firstValue)
+        matCol[1].append(secondValue)
+        matCol[2].append(thirdValue)
+    perSet = {''.join(map(str, [f, s, t])) for f in matCol[0]
+            for s in matCol[1] for t in matCol[2]}
+
+
+    def calMin(x): return sum(list(map(int, list(x))))
+
+
+    sumSet = [calMin(p) for p in perSet]
+    print('#{} {}'.format(t, min(sumSet)))
