@@ -44,16 +44,34 @@ NxN 크기의 미로에서 출발지 목적지가 주어진다.
 [출력]
 각 줄마다 "#T" (T는 테스트 케이스 번호)를 출력한 뒤, 답을 출력한다.
 '''
+def bfs(row_idx, col_idx, matrix):
+    distance = 0
+    drow = [0, 0, 1, -1]
+    dcol = [1, -1, 0, 0]
+    Q = [(row_idx, col_idx)]
+    visited = [[0 for _ in range(len(matrix))] for __ in range(len(matrix))]
+    while Q:
+        ri, ci = Q.pop(0)
+        for d in range(4):  # 상하좌우
+            new_row_idx = row_idx + drow[d]
+            new_col_idx = col_idx + dcol[d]
+            
+            if 0 <= new_row_idx <= len(visited) and 0 <= new_col_idx <= len(visited):
+                Q.append(new_row_idx, new_col_idx)
+                distance += 1
+            
+            elif matrix[new_row_idx][new_col_idx] == 3:
+                distance += 1
+                return distance
+
 T = int(input()) + 1
 # for t in range(1, T):
 
 N = int(input())
 matrix = [list(map(int, input())) for _ in range(N)]
 *_, (row_idx, col_idx) = [(ri, ci) for ri, rowArr in enumerate(matrix) for ci, colVal in enumerate(rowArr) if colVal==2]
+bfs(row_idx, col_idx)
+print('#{} {}'.format(1, 1))
 
-def bfs(row_idx, col_idx):
-    Q = [(row_idx, col_idx)]
-    visited
-    while Q:
-        ri, ci = Q.pop(0)
+
         
