@@ -95,7 +95,6 @@ T = int(input()) + 1
 # for t in range(1, T):
     # print('#{} {}'.format(t, result))
 
-
 N, M = map(int, input().split())
 Ci = list(map(int, input().split()))
 pizza = []
