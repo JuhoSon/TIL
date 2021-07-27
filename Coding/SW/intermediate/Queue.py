@@ -107,3 +107,4 @@ while Ci:
         pizza.append(Ci.pop(0))
     else:
         pizza.append(checkPizza)
+
