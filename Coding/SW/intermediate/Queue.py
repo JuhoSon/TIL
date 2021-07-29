@@ -106,5 +106,5 @@ while Ci:
     if checkPizza == 0:
         pizza.append(Ci.pop(0))
     else:
-        pizza.append(checkPizza)
+        pizza.append(checkPizza)  # index 필요
 
