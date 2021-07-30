@@ -94,6 +94,7 @@ N개의 피자를 동시에 구울 수 있는 화덕이 있다. 피자는 치즈
 T = int(input()) + 1
 # for t in range(1, T):
     # print('#{} {}'.format(t, result))
+    # 
 
 N, M = map(int, input().split())
 Ci = list(map(int, input().split()))
