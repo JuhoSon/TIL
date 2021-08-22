@@ -110,3 +110,4 @@ while Ci:
         pizza.append(checkPizza)  # index 필요
 
 # 210816
+# 210822
