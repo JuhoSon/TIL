@@ -108,12 +108,3 @@ while Ci:
         pizza.append(Ci.pop(0))
     else:
         pizza.append(checkPizza)  # index 필요
-
-# 210816
-# 210822
-# 210824
-# 210824.
-
-# 210826
-
-# 210828 
