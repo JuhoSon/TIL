@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% comment %} 
+  공을 던질 수 있도록 폼을 준비하자!
+{% endcomment %}
+
+{% comment %} 
+  action -> 어디로 공을 던질지!
+  method -> 어떤 방식으로 던질지(단순 조회가 GET)
+{% endcomment %}
+<form action="/articles/catch/" method="GET">
+  {% comment %} 
+    name -> 어떤 박스에 담아서 던지지 결정!
+    name의 값은 박스의 이름을 의미한다!  
+  {% endcomment %}
+  <input type="text" name="ball">
+  <input type="submit" value="공을 던지자!">
+</form>
+{% endblock %}

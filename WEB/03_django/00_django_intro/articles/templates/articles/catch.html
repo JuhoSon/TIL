@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ result }}</h2>
+{% comment %} <a href="/articles/throw/">[뒤로가기]</a> {% endcomment %}
+<a href="{% url 'articles:throw' %}">[뒤로가기]</a>
+
+{% comment %} <a href="/articles/dtl-practice/">[DTL 연습한 곳으로 가자]</a> {% endcomment %}
+<a href="{% url 'articles:dtl' %}">[DTL 연습한 곳으로 가자]</a>
+
+{% comment %} <a href="/articles/index/">[articles 페이지의 인덱스로 가기]</a> {% endcomment %}
+{% comment %} app_name:path_name {% endcomment %}
+<a href="{% url 'articles:index' %}">[articles 페이지의 인덱스로 가기]</a>
+
+<a href="{% url 'pages:index' %}">[pages 페이지의 인덱스로 가기]</a>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+  <h2>여기는 DETAIL 페이지입니다.</h2>
+  <h3>게시글 제목: {{ article.title }}</h3>
+  <p>게시글 내용: {{ article.content }}</p>
+  <p>게시글 작성 시각: {{ article.created_at|naturaltime }}</p>
+  <p>게시글 수정 시각: {{ article.updated_at|naturaltime }}</p>
+  {% comment %} <a href="{% url 'articles:delete' article.pk %}">[글 삭제]</a> {% endcomment %}
+  <form action="{% url 'articles:delete' article.pk %}" method="POST">
+    {% csrf_token %}
+    {% comment %} <input type="submit" value="글 삭제"> {% endcomment %}
+    <button>글 삭제</button>
+  </form>
+  <a href="{% url 'articles:edit' article.pk %}">[글 수정]</a>
+  <a href="{% url 'articles:index' %}">[인덱스 페이지로 가자]</a>
+{% endblock content %}

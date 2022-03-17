@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>여기는 NEW 페이지입니다.</h2>
+  <form action="{% url 'articles:create' %}" method="POST">
+    {% comment %} https://docs.djangoproject.com/en/4.0/ref/csrf/#how-to-use-it {% endcomment %}
+    {% csrf_token %}
+    <label for="title">게시글 제목: </label>
+    <input type="text" id="title" name="title">
+    <label for="content">게시글 내용: </label>
+    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    <input type="submit" value="게시글 작성">
+  </form>
+{% endblock content %}

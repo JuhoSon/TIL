@@ -1,0 +1,16 @@
+{% comment %} https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#extends {% endcomment %}
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>이건 detail.html입니다.</h2>
+  <p>base.html을 상속</p>
+  {% comment %} 
+   https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#include
+  {% endcomment %}
+  {% comment %} 카드 로직 {% endcomment %}
+  <div class="container">
+    {% include "_card.html" %}
+  </div>
+  {% comment %} 캐러셀 로직 {% endcomment %}
+  {% include "_carousel.html" %}
+{% endblock content %}
