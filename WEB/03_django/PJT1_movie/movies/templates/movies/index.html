@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class='d-flex justify-content-center'>
+    <img src="https://via.placeholder.com/840x600" alt="topmovie">
+  </section>
+  
+  <div class='my-4 text-center'>영화 목록</div>
+
+  <section class='d-flex justify-content-around'>
+    <div class="w-100 row">
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive1Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive2Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive3Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive4Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive5Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#moive6Modal">
+            <img src="https://via.placeholder.com/600x840" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+<div class="modal fade" id="moive1Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://via.placeholder.com/600x840" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/600x840" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/600x840" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moive2Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Carousel
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moive3Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Carousel
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moive4Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Carousel
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moive5Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Carousel
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="moive6Modal" tabindex="-1" aria-labelledby="movie1Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="movie1Label">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Carousel
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
+

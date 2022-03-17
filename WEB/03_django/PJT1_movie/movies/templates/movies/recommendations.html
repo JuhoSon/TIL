@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class='text-center my-4'>쇼생크 탈출과 비슷한 영화 추천받기</div>
+
+  <section class='d-flex row'>
+    <img class='col col-12 col-md-6 col-lg-3' src={{ img }} alt="movieimg">
+    <div class='col col-12 col-md-6 col-lg-9'>
+      <div class='row d-flex justify-content-start align-items-center'>
+        <div class='col col-2 text-center'>{{ title }}</div>
+        <button type="button" class="btn btn-success col col-2">{{ vote_average }}</button>
+      </div>
+      <div>{{ content }}</div>
+      <div>개봉일 : {{ release_date}}</div>
+      <a class="btn btn-info w-100" style="margin-bottom: 100px;" href={{ detail }}>상세정보</a>
+
+    </div>
+  </section>
+{% endblock body %}
+
