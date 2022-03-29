@@ -1,0 +1,34 @@
+1 연구
+SCIE 논문 Bioinformatics IF 7, Q1 rank, 
+SICE급 학회 American Society for Mass Spectrometry IF 3.1 Q1 Rank
+
+2 취업
+현대, LG, 삼성, CJ, 기술(라인, 오늘의집, MOLOCO 등) 코딩테스트 ~ 인적성 ~ 면접준비
+
+2-1 지원서
+이력서 정리 (완료) -> 피드백받아서 수정 필요
+포트폴리오 정리 (완료) -> 피드백받아서 수정 필요
+자기소개서 정리 (미완료) -> 성격, 성장, 협업, 도전, 성공 관련 템플릿 정리
+
+2-2 필기시험
+코딩테스트 (미완료) -> 완전탐색까지 공부함. DP, 그래프, A형 공부 더 필요 (대략 20문제)
+적성시험 (LG, KT) -> 막막하다..
+
+2-3 면접준비
+딥러닝 기반 펩타이드 검출률 예측 (한양대학교)
+단어 유사도 기반 국회 의안 검색시스템 개발 (개인)
+인실리코 뉴클레오타이드 디자인 기술 개선 (한양대학교, 씨젠)
+블럭 장난감 제조 공정 최적화 (LG, 데이콘)
+SNS 기반 익명 유저 식별화 (다음소프트)
+미세먼지의 사회적 영향 분석 및 비즈니스 모델링 (빅콘테스트)
+구강 건강상태 진단 예측 모델 개발 (국가수리과학연구소)
+
+위 프로젝트에 사용된 RNN(LSTM, GRU, Transformer, Attention), CNN(CapsNet), Transfer learning(VGG, ResNet), Ensemble(Boosting, Bagging), Cost Function, Backpropagation, Gradient Descent, PCA, Clustering, p-value, binomial and normal distribution, non-linear and linear method, ranking system, database
+
+그리고 가상면접 최소 5회는 필요, 딱 치면 답이 나올만큼 숙달필요 (경험해보니 그렇게 안하면 개소리하게됨..)
+
+3 새로운 프로젝트
+공모전 ,,, 토이프로젝트 ,,,
+
+4 인턴
+연구원 ,,,

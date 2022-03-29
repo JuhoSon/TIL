@@ -1,19 +1,23 @@
+from os import link
 import sys
 sys.stdin = open('Tree_2533_SNS.txt')
 
 
 def dfs(start):
     stack = [start]
+    maps[start][0] = 0  # start is not early
+    maps[start][1] = 1  # start is early
+    visited[start] = 1
     while stack:
         start = stack.pop()
-        visited[start] = 1
-        maps[start][0] = 0  # start is not early
-        maps[start][1] = 1  # start is early
-
+        
         for linked_v in tree[start]:
             if not visited[linked_v]:
                 stack.append(linked_v)
-            else:  # leaf node
+                maps[linked_v][0] = 0  # start is not early
+                maps[linked_v][1] = 1  # start is early
+                visited[linked_v] = 1
+            if len(tree[linked_v]) == 1:  # leaf node (1 is parent node)
                 maps[start][0] += maps[linked_v][1]
                 maps[start][1] += min(maps[linked_v][0], maps[linked_v][1])
 
